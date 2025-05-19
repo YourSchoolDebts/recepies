@@ -1,0 +1,10 @@
+.image-slider-container {
+    margin: 1.6rem auto;
+    width: 400px;
+  }
+  
+  .image-slider-container .slick-prev:before,
+  .image-slider-container .slick-next:before {
+    color: black;
+  }
+  
