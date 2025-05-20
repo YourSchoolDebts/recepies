@@ -6,6 +6,7 @@ import { Contact } from './pages/contact';
 import { About } from './pages/about';
 import { Category } from "./pages/category";
 import { Recipe } from "./pages/recipe";
+import { NoMatch } from "./pages/nomatch"
 
 // function NoMatch() {
 //   let location = useLocation();
