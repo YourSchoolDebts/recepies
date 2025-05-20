@@ -25,7 +25,7 @@ function NoMatch() {
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/recepies">
         <Header />
         <main className="container content">
             <Routes>
