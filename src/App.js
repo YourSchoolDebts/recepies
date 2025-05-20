@@ -28,7 +28,7 @@ function App() {
         <Header />
         <main className="container content">
             <Routes>
-              <Route path="*" element={<NoMatch />} />
+              <Route path='*' element={<NoMatch />} />
               <Route path="/" element={<Home />} />
               <Route path="contact/" element={<Contact />} />
               <Route path="about/" element={<About />} />
