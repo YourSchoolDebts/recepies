@@ -8,24 +8,16 @@ import { Category } from "./pages/category";
 import { Recipe } from "./pages/recipe";
 // import { NoMatch } from "./pages/nomatch"
 
-function Status({ code, children }) {
-  return (
-    <Route
-      render={({ staticContext }) => {
-        if (staticContext) staticContext.status = code;
-        return children;
-      }}
-    />
-  );
-}
 
 function NoMatch() {
+  let location = useLocation();
+
   return (
-    <Status code={404}>
-      <div>
-        <h1>Sorry, can’t find that.</h1>
-      </div>
-    </Status>
+    <div>
+        <h1>Oops!</h1>
+        <h3>Sorry, an unexpected error has occurred.</h3>
+        <h5>Does not exist: {location.pathname}</h5>
+    </div>
   );
 }
 
@@ -33,7 +25,7 @@ function NoMatch() {
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Header />
         <main className="container content">
             <Routes>
@@ -42,11 +34,11 @@ function App() {
               <Route path="about/" element={<About />} />
               <Route path="category/:name" element={<Category />} />
               <Route path="meal/:id" element={<Recipe />} />
-              <Route component={<NoMatch />} />
+              <Route path="*" element={<NoMatch />} />
             </Routes>
         </main>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
