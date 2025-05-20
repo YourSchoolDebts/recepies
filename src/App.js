@@ -7,17 +7,17 @@ import { About } from './pages/about';
 import { Category } from "./pages/category";
 import { Recipe } from "./pages/recipe";
 
-function NoMatch() {
-  let location = useLocation();
+// function NoMatch() {
+//   let location = useLocation();
 
-  return (
-    <div>
-        <h1>Oops!</h1>
-        <h3>Sorry, an unexpected error has occurred.</h3>
-        <h5>Does not exist: {location.pathname}</h5>
-    </div>
-  );
-}
+//   return (
+//     <div>
+//         <h1>Oops!</h1>
+//         <h3>Sorry, an unexpected error has occurred.</h3>
+//         <h5>Does not exist: {location.pathname}</h5>
+//     </div>
+//   );
+// }
 
 
 function App() {
